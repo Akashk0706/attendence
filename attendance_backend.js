@@ -12,3 +12,10 @@ document.getElementById('attendanceForm').addEventListener('submit', function(ev
     this.reset();
   }
 });
+document.getElementById('getAttendanceButton').addEventListener('click', function() {
+    if (attendanceList.length > 0) {
+        alert(`Students present: ${attendanceList.join(', ')}`);
+    } else {
+        alert('No students have been marked present yet.');
+    }
+});
